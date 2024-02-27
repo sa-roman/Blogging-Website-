@@ -3,6 +3,7 @@ import bodyParser from "body-parser";
 import {dirname} from "path";
 import { fileURLToPath } from "url";
 import path from "path";
+import { rmSync } from "fs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
@@ -66,9 +67,20 @@ app.post("/post", (req,res)=>{
     res.redirect("/");
 })
 
-app.edit("/edit", (req,res)=>{
-   
-
+app.post("/edit", (req,res)=>{
+   const postId = parseInt(req.body.id);
+   const updatedTitle = req.body.title;
+   const updatedContent = req.body.content;
+   const postToUpdate= posts.find(post => post.id === postId);
+   if (postToUpdate) {
+    // Update the post's title and content
+    postToUpdate.title = updatedTitle;
+    postToUpdate.content = updatedContent;
+    res.redirect("/"); // Redirect to the homepage after updating
+} else {
+    // Handle the case where the post with the provided ID is not found
+    res.status(404).send("Post not found");
+}
 })
 
 

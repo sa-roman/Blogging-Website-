@@ -1,10 +1,10 @@
 <%- include("header.ejs")%>
-    <form id="Button">
+    <form id="Button" action="/edit" method="post">
     <label for="number">Title ID</label>
     <input type="number" name="id">
     <label for="text">Title</label>
     <input type="text" name="title" >
     <label for="content">Content</label>
     <textarea type="textarea" name="content"></textarea>
-    <input type="button" value="Edit">
-    </form
+    <input type="submit" value="Edit">
+    </form>

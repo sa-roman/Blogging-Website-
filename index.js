@@ -54,6 +54,23 @@ app.post("/read", (req,res)=>{
 
 })
 
+app.post("/post", (req,res)=>{
+    const title= req.body.title;
+    const content = req.body.content;
+    const newPost={
+        id: posts.length +1,
+        title: title,
+        content: content
+    }
+    posts.push(newPost);
+    res.redirect("/");
+})
+
+app.edit("/edit", (req,res)=>{
+   
+
+})
+
 
 app.listen(port, ()=>{
     console.log("Listening to port: " + port);

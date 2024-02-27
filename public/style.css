@@ -1,0 +1,47 @@
+#header{
+    margin: 0px;
+    padding: 0px;
+}
+#top{
+    background-color: aquamarine;
+}
+#logo {
+    margin: 32px;
+    
+    display: inline-block;
+}
+
+#nav{
+    display: inline-flex;
+    justify-content: right;
+    width: 70%;
+}
+.custom{  
+    cursor: pointer;
+    margin: 16px;
+    align-items: center;
+    text-decoration: none;
+    color:black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
+    cursor: pointer;    
+}
+#main{
+    margin: 32px;
+}
+#Button{
+    margin: 32px;
+}
+#read{
+    margin: 32px;}
+input{
+    display: block;
+    margin: 8px 0;
+}
+label{
+    display: block;
+}
+textarea{
+    width: 90%;
+    height: 500px;
+}

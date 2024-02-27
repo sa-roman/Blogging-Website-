@@ -1,0 +1,17 @@
+<%- include("header.ejs")%>
+ <div id="read">
+ <%if(locals.title && locals.content){%>
+    <h1> <%= title%> </h1>
+    <p><%= content%> </p>
+ <%}%>
+
+ </div>   
+<form id="Button" action="/read" method="post">
+    <label for="number">Title ID</label>
+    <input type="number" name="id">
+    <label for="text">Title</label>
+    <input type="text" name="title" >
+    <input type="submit" value="Read">
+    </div>
+
+<%- include("header.ejs")%>

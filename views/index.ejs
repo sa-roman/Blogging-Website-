@@ -1,0 +1,17 @@
+<%- include("header.ejs")%>
+<main id= "main">
+ <h1>Welcome to My Blog</h1>
+    
+    <% if (posts.length > 0) { %>
+        <ol>
+            <% posts.forEach(post => { %>
+             <li><%= post.title%> <br><%= post.content%></li>
+            <% }) %>
+        </ol>
+    <% } else { %>
+        <p>No posts found.</p>
+    <% } %>
+    
+    
+</main>
+<%- include("footer.ejs")%>
